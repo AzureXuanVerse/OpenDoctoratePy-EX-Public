@@ -6,6 +6,17 @@
 <details>
 <summary><strong>最近三条更新日志(点击展开)：</strong></summary>
 
+- 2026 年 2 月 10 日
+
+    修复：  
+    1、启动时出现 **AttributeError: 'function' object has no attribute 'getLogger'** 错误  
+    2、肉鸽不期而遇处理函数（第363行）语法不正确的问题  
+    3、部分设备在使用时会出现 **FileNotFoundError : [Errno 2] No such file or directory: 'data/crisisV2/cc?.json '** 的问题
+
+    更新：  
+    1、卡池文件  
+    2、部分商店数据
+
 - 2026 年 2 月 9 日
 
     修复：  
@@ -39,19 +50,6 @@
 > [!CAUTION]  
 > 警告：由于 **不期而遇** 事件繁杂、逻辑各异，当前处理 **不期而遇** 的函数无法正确处理全部事件，可能但不限于出现以下开局状况：被坎诺特催债，遇到“美人关”、未来猎手等高难战斗事件  
 > 请**谨慎**选择是否游玩 **不期而遇** 节点
-
-- 2026 年 1 月 18 日
-
-    修复：  
-    1、app.py路由对 `accountSync` 回滚不完整导致的错误  
-    2、app.py启动顺序导致 `config` 无法读取的问题  
-
-    更新：  
-    1、大部分 `write_json` 函数调用处使用 `run_after_response` 以保证IO操作不会过多影响函数运行耗时  
-> [!WARNING]  
-> 注意：已将大部分 `write_json` 的调用替换为带 `run_after_response` 的版本，并已在模拟器和真机上完成测试。  
-对于尚未添加 `run_after_response` 的 `write_json` 调用位置，不建议进行替换，否则可能会引发非预期的问题。
-    
 </details>
 
 本项目旨在作为OpenDoctoratePy的分支，拓展与完善功能。短期目标为尽可能防止因404或未知错误被踹回登录界面，长期目标为实现类似SPT-AKI项目的单人游玩本地服务
@@ -161,30 +159,7 @@
 
 ### 1、天机阁
 
-此条目编写于 2026年2月9日
+此条目编写于 2026年2月9日  
+最后修改于 2026年2月
 
-[目标网页](https://tianjg.com/6258.html)  
-[百度网盘](https://pan.baidu.com/s/1zv_VCEmQeENBnGspwajxdw?pwd=agk9) [123云盘](https://www.123684.com/s/Gnz8Vv-A2Wc3) [夸克网盘](https://pan.quark.cn/s/e69503915336?pwd=iiv9)  
-解压密码 tianjg.com ，感谢一位要求匿名的热心人士提供网盘链接
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://pub-630613d36c8744bb9daff4cf4fb64f9e.r2.dev/tjg1.png" width="80%" />
-    </td>
-    <td align=>
-      <img src="https://pub-630613d36c8744bb9daff4cf4fb64f9e.r2.dev/tjg2.png" width="80%" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"><em>图1</em></td>
-    <td align="center"><em>图2</em></td>
-  </tr>
-</table>
-
-从 **图2** 中的文件列表可看到，该网站在分发时违反了以下条款：  
-- GPLv3 第5条（Section 5）
-    - 未保留全部 **许可证声明及其他重要通知文件（包括 README.md 等）**
-    - 移除或隐藏源代码中已有的许可证信息或官方声明内容
-- GPLv3 第6条（Section 6）
-    - 未以不低于目标程序的便利性，向接收方免费提供对应的 **完整源代码**
+分发者已改正，公示信息移除
